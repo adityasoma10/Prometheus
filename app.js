@@ -50,7 +50,7 @@ app.post('/sign_up', async function(req,res){
     testData = await db.collection("details").find({}).toArray(async function(err, result) {
     if (err) throw err;
     testData = await result;
-    await db.close();
+   
     console.log(testData);
     res.render('secret', {data:result});
   });
